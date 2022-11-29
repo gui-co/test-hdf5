@@ -73,14 +73,25 @@ int main(void) {
     for (int i = 0; i < nDims; i++)
         std::cout << "  " << i << ": " << dims[i] << " values" << std::endl;
 
-    std::vector<std::vector<int> > workspace = extractData(dataset, 1,2,0);
 
-    for (const auto &spectrum: workspace) {
+    std::cout << "First case: 0,1,2" << std::endl;
+    std::vector<std::vector<int> > workspace1 = extractData(dataset, 0, 1, 2);
+    for (const auto &spectrum: workspace1) {
         for (auto value : spectrum) {
             std::cout << value << " ";
         }
         std::cout << std::endl;
     }
+
+    std::cout << "Second case: 1,2,0" << std::endl;
+    std::vector<std::vector<int> > workspace2 = extractData(dataset, 1, 2, 0);
+    for (const auto &spectrum: workspace2) {
+        for (auto value : spectrum) {
+            std::cout << value << " ";
+        }
+        std::cout << std::endl;
+    }
+
     return 0;
 }
 
