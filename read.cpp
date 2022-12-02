@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "H5Cpp.h"
+#include <H5Cpp.h>
 
 std::vector<std::vector<int> > extractData(const H5::DataSet &dataset,
                                            size_t tubeIndex, size_t pixelIndex,

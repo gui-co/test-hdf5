@@ -1,4 +1,4 @@
-#include "H5Cpp.h"
+#include <H5Cpp.h>
 
 int main(void) {
     H5::Exception::dontPrint();
